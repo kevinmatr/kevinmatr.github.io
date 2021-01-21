@@ -2,7 +2,6 @@
 html,
 body {
   height: 100%;
-  overflow-x: hidden;
 }
 .table-area {
   overflow: auto;
@@ -3682,6 +3681,14 @@ h6 {
   margin: 0 auto;
   margin-top: 60px;
 }
+.dbcontainer {
+  background: #FFFFFF;
+  box-shadow: 0px 10px 20px 0px rgba(236, 236, 236, 0.86);
+  width: 720px;
+  margin: 0 auto;
+  margin-top: 0px;
+  padding: 50px;
+}
 .content {
   width: 720px;
   margin: 0 auto;
@@ -3718,7 +3725,7 @@ h6 {
   width: 65px;
   line-height: 1.2;
   color: #1F1F1F;
-  font-family: Arial, sans-serif;
+  font-family: 'Pacifico', cursive;
 }
 .header .site_title_container .site_title a:hover {
   color: #666;
