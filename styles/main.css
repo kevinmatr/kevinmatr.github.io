@@ -3687,7 +3687,10 @@ h6 {
   width: 720px;
   margin: 0 auto;
   margin-top: 0px;
-  padding: 50px;
+  padding: 50px 50px 50px 50px;
+  -webkit-background-size: cover;
+  background-size: cover;
+  overflow: hidden;
 }
 .content {
   width: 720px;
@@ -4242,6 +4245,9 @@ em {
   }
   .header {
     width: 90%;
+  }
+  .dbcontainer {
+    width: 80%;
   }
   .content {
     width: 90%;
