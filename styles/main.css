@@ -2266,6 +2266,11 @@ html {
   background-color: #fff;
   -webkit-font-smoothing: antialiased;
 }
+:root {
+  --bg: #1e1e22;
+  --textColor: #96969a;
+  --borderColor: #2c2c3a;
+}
 body {
   color: rgba(0, 0, 0, 0.5);
   font-family: 'PingHei', 'PingFang SC', Helvetica Neue, 'Work Sans', 'Hiragino Sans GB', 'Microsoft YaHei', SimSun, sans-serif;
@@ -2511,6 +2516,10 @@ table {
   margin-right: 5%;
   /*在原来的主题上添加的*/
 }
+.dbcontainer {
+  height: auto;
+  padding: 30px;
+}
 .page-top {
   width: 60%;
   position: fixed;
@@ -2527,6 +2536,7 @@ table {
   padding: 18px 30px;
   float: left;
   font-size: 12px;
+  font-weight: bold;
 }
 .page-top .nav li {
   position: relative;
@@ -3050,6 +3060,13 @@ a.btn {
   }
   .footer {
     display: none;
+  }
+}
+@media screen and (max-width: 960px) and (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1e1e22;
+    --textColor: #96969a;
+    --borderColor: #2c2c3a;
   }
 }
 .jinggetag {
