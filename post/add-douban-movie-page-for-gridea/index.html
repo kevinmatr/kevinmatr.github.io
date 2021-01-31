@@ -12,8 +12,8 @@
 <link rel="alternate" type="application/rss+xml" title="Vapour » Feed" href="https://kevinmatr.github.io/atom.xml">
     <meta name="description" content="🎥🎥🎥
 
-之前在翻找Gridea主题看到无意中看到biocron-pro作者的博客里有一个电影页面。仔细看发现可以发现数据来自豆瓣，推测记录来自豆瓣观影记录，感觉在博客中加一个电影页确实是个不错的点子🤠
-搜索发现了bmdb这个项目，..."/>
+
+之前在翻找Gridea主题看到无意中看到[biocron-pro](https://github.com/qyxtim/bitcron-pro)作者的博客里有一个[电影页面](https://blog.blinkstar...."/>
     <meta name="keywords" content="Gridea"/>
 </head>
 
@@ -55,21 +55,22 @@
                 <div class="post animated fadeInDown">
                     <div class="post_title post_detail_title">
                         <h2><a>通过bmdb项目为Gridea主题添加豆瓣电影页面</a></h2>
-                        <span class="article-info">2021-01-31, 1172 words, 5 min read</span>
+                        <span class="article-info">2021-01-31, 1192 words, 5 min read</span>
                     </div>
                     <div class="post_content markdown">
                         <p class="md_block">
                             <span class="md_line md_line_start md_line_end"><p>🎥🎥🎥</p>
 <!-- more -->
-<p>之前在翻找Gridea主题看到无意中看到<a href="https://github.com/qyxtim/bitcron-pro">biocron-pro</a>作者的博客里有一个<a href="https://blog.blinkstar.cn/movies">电影页面</a>。仔细看发现可以发现数据来自豆瓣，推测记录来自豆瓣观影记录，感觉在博客中加一个电影页确实是个不错的点子🤠</p>
-<p>搜索发现了<a href="https://github.com/iMuFeng/bmdb">bmdb</a>这个项目，提供了的接口可以很方便的帮忙拉到数据，但是搜索发现具体怎么添加到主题内并没有一个教程，<s>果然Gridea还是太小众了</s>。最后摸索着实现了，经过实测这个方法可以给大部分的主题添加电影页面，但是由于主题布局的不同可能会出现错位的问题，需要在相应主题的main.less中作出相应的修改。</p>
+<br/>
+之前在翻找Gridea主题看到无意中看到[biocron-pro](https://github.com/qyxtim/bitcron-pro)作者的博客里有一个[电影页面](https://blog.blinkstar.cn/movies)。仔细看发现可以发现数据来自豆瓣，推测记录来自豆瓣观影记录，感觉在博客中加一个电影页确实是个不错的点子🤠
+<br/>
+搜索发现了[bmdb](https://github.com/iMuFeng/bmdb)这个项目，提供了的接口可以很方便的帮忙拉到数据，但是搜索发现具体怎么添加到主题内并没有一个教程，~~果然Gridea还是太小众了~~。最后摸索着实现了，经过实测这个方法可以给大部分的主题添加电影页面，但是由于主题布局的不同可能会出现错位的问题，需要在相应主题的main.less中作出相应的修改。
 <br/>
 <br/>
-<h2 id="1-讲代码添加到文件中">1. 讲代码添加到文件中</h2>
+<h2 id="1-将代码添加到文件中">1. 将代码添加到文件中</h2>
 <p>我们要先在菜单为电影页面添加一个入口</p>
 <p>打开Gridea的客户端，进入菜单页面，创建一个菜单，名<br>
-称随意，选择内链，Link处<br>
-填入<code>你的博客网址/movies</code><br>
+称随意，选择内链，Link处填入<code>你的博客网址/movies</code><br>
 <img src="https://kevinmatr.github.io/post-images/1612084370887.png" alt="添加页面" loading="lazy"></p>
 <br/>
 <h2 id="2-注册bmdb项目并获取接口">2. 注册bmdb项目并获取接口</h2>
@@ -109,7 +110,7 @@
 
 &lt;/html&gt;
 </code></pre>
-<p>可以看到header下面紧接着就是归档列表了，那我们就可以照葫芦绘瓢讲container加到header下面就好。<strong>注意：并不是每一个主题都如此简单，但是大框架不会变只需要在header以及重要的元素下面加入container即可</strong></p>
+<p>可以看到header下面紧接着就是归档列表了，那我们就可以照葫芦绘瓢讲container加到header下面就好。<strong>注意：并不是每一个主题的结构都如此简单，但是大框架不会变，只需要在header以及重要的元素下面加入container即可</strong></p>
 <p>我们将<code>archives.ejs</code>中的代码整个复制到<code>movies.ejs</code>中，然后将代码替换成container的div块。</p>
 <p>接下来我们加入bmdb项目的代码</p>
 <h3 id="设置html头部并引入资源">设置html头部并引入资源</h3>
