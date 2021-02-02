@@ -80,6 +80,25 @@
                     </div>
                 </div>
                 
+                    
+                        <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<div id="gitalk-container" style="padding-bottom: 20px;"></div>
+<script>
+    var gitalk = new Gitalk({
+        clientID: 'df316acbadb41379dac4',
+        clientSecret: '06a7ca99accb7381bac09a8c68479289b3a05cc0',
+        repo: 'Comments',
+        owner: 'kevinmatr',
+        admin: ['kevinmatr'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    })
+    gitalk.render('gitalk-container')
+</script>
+                    
+                    
+                
             </div>
         </div>
     </div>
