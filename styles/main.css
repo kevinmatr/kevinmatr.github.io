@@ -453,10 +453,10 @@ td {
   border-radius: 5px;
 }
 .nav-bar .menu-container a.menu {
-  margin-right: 8px;
+  margin-right: 1px;
   font-family: 'Comfortaa', cursive;
   font-size: 16px;
-  padding: 8px 16px;
+  padding: 8px 10px;
   color: #1D4ED8;
 }
 .nav-bar .menu-container a.rss {
